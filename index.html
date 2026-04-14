@@ -1,162 +1,172 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Portfolio | Ingeniero</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Portfolio | Ingeniero</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;700;900&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Rajdhani:wght@400;600;700&family=Exo+2:wght@300;400;700;900&display=swap" rel="stylesheet"/>
 
-<style>
-:root {
-  --bg:#050c14;
-  --surface:#0a1628;
-  --card:#0d1f38;
-  --border:#1a3a5c;
-  --accent:#00d4ff;
-  --accent2:#00ff9d;
-  --accent3:#ff6b35;
-  --text:#e0eaf5;
-  --muted:#6a8aaa;
-  --mono:'Share Tech Mono', monospace;
-  --head:'Exo 2', sans-serif;
-  --body:'Rajdhani', sans-serif;
-}
+    <style>
+        :root {
+            --bg: #050c14;
+            --surface: #0a1628;
+            --card: #0d1f38;
+            --border: #1a3a5c;
+            --accent: #00d4ff;
+            --accent2: #00ff9d;
+            --accent3: #ff6b35;
+            --text: #e0eaf5;
+            --muted: #6a8aaa;
+            --mono: 'Share Tech Mono', monospace;
+            --head: 'Exo 2', sans-serif;
+            --body: 'Rajdhani', sans-serif;
+        }
 
-*{margin:0;padding:0;box-sizing:border-box;}
-body{
-  background:var(--bg);
-  color:var(--text);
-  font-family:var(--body);
-}
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-/* HERO */
-#hero{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:60px;
-  padding:120px 40px;
-  flex-wrap:wrap;
-}
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: var(--body);
+            overflow-x: hidden;
+        }
 
-/* FOTO */
-.photo-frame{
-  width:280px;
-  height:280px;
-  border-radius:50%;
-  position:relative;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
+        /* HERO */
+        #hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 80px 40px;
+            flex-wrap: wrap;
+        }
 
-/* Borde animado */
-.photo-frame::before{
-  content:'';
-  position:absolute;
-  inset:-4px;
-  border-radius:50%;
-  background:conic-gradient(var(--accent),var(--accent2),var(--accent3),var(--accent));
-  animation:spin 4s linear infinite;
-  z-index:0;
-}
+        /* FOTO */
+        .photo-frame {
+            width: 280px;
+            height: 280px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-/* FOTO REAL */
-.photo-inner{
-  width:100%;
-  height:100%;
-  border-radius:50%;
-  background-image:url('https://raw.githubusercontent.com/oinotna4761-beep/Mi-pagina-web/refs/heads/main/assets/foto.png');
-  background-size:cover;
-  background-position:center;
-  position:relative;
-  z-index:1;
-  border:4px solid var(--card);
-}
+        /* Borde animado */
+        .photo-frame::before {
+            content: '';
+            position: absolute;
+            inset: -5px; /* Tamaño del grosor del borde */
+            border-radius: 50%;
+            background: conic-gradient(var(--accent), var(--accent2), var(--accent3), var(--accent));
+            animation: spin 4s linear infinite;
+            z-index: 0;
+        }
 
-/* TEXTO */
-.hero-text{
-  max-width:500px;
-}
+        /* FOTO REAL */
+        .photo-inner {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            /* La URL ahora debería cargar sin problemas */
+            background-image: url('https://raw.githubusercontent.com/oinotna4761-beep/Mi-pagina-web/refs/heads/main/assets/foto.png');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            border: 6px solid var(--bg); /* Aumenté el borde para que resalte más */
+        }
 
-.hero-name{
-  font-size:3rem;
-  font-family:var(--head);
-  font-weight:900;
-}
+        /* TEXTO */
+        .hero-text {
+            max-width: 500px;
+        }
 
-.hero-name span{
-  color:var(--accent);
-}
+        .hero-name {
+            font-size: 3.5rem;
+            font-family: var(--head);
+            font-weight: 900;
+            line-height: 1.1;
+        }
 
-.hero-title{
-  color:var(--accent2);
-  margin:10px 0 20px;
-}
+        .hero-name span {
+            color: var(--accent);
+        }
 
-.hero-desc{
-  color:var(--muted);
-}
+        .hero-title {
+            font-size: 1.5rem;
+            color: var(--accent2);
+            margin: 15px 0;
+            font-family: var(--mono);
+        }
 
-/* BOTONES */
-.btn{
-  display:inline-block;
-  padding:10px 20px;
-  margin-top:20px;
-  border:2px solid var(--accent);
-  color:var(--accent);
-  text-decoration:none;
-  transition:.3s;
-}
+        .hero-desc {
+            color: var(--muted);
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
 
-.btn:hover{
-  background:var(--accent);
-  color:var(--bg);
-}
+        /* BOTONES */
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            margin-top: 25px;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: .3s;
+        }
 
-/* ANIMACIÓN */
-@keyframes spin{
-  to{transform:rotate(360deg);}
-}
+        .btn:hover {
+            background: var(--accent);
+            color: var(--bg);
+            box-shadow: 0 0 20px var(--accent);
+        }
 
-/* RESPONSIVE */
-@media(max-width:768px){
-  #hero{
-    flex-direction:column;
-    text-align:center;
-  }
-}
-</style>
+        /* ANIMACIÓN */
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* RESPONSIVE */
+        @media(max-width:768px) {
+            #hero {
+                flex-direction: column-reverse; /* Foto arriba en móviles */
+                text-align: center;
+                padding: 60px 20px;
+            }
+            .hero-name { font-size: 2.5rem; }
+        }
+    </style>
 </head>
-
 <body>
 
 <section id="hero">
+    <div class="hero-text">
+        <h1 class="hero-name">
+            Tu <span>Nombre</span>
+        </h1>
 
-  <div class="hero-text">
-    <h1 class="hero-name">
-      Tu <span>Nombre</span>
-    </h1>
+        <p class="hero-title">
+            &lt; Ingeniero en Sistemas /&gt;
+        </p>
 
-    <p class="hero-title">
-      Ingeniero en Sistemas · Desarrollador
-    </p>
+        <p class="hero-desc">
+            Apasionado por la tecnología y la resolución de problemas complejos.
+            Construyo soluciones eficientes y escalables.
+        </p>
 
-    <p class="hero-desc">
-      Apasionado por la tecnología y la resolución de problemas complejos.
-      Construyo soluciones eficientes y escalables.
-    </p>
+        <a href="#" class="btn">Ver proyectos</a>
+    </div>
 
-    <a href="#" class="btn">Ver proyectos</a>
-  </div>
-
-  <!-- FOTO -->
-  <div class="photo-frame">
-    <div class="photo-inner"></div>
-  </div>
-
+    <div class="photo-frame">
+        <div class="photo-inner"></div>
+    </div>
 </section>
 
 </body>
