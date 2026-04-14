@@ -203,13 +203,6 @@
       opacity: 0;
       animation: fadeIn 0.8s ease 1.2s forwards;
     }
-
-    /* ▼▼▼ PLACEHOLDER DE FOTO ▼▼▼
-       Para cambiar la foto: reemplaza la URL en la línea de "background-image"
-       dentro de .photo-frame::after. Soporta JPG, PNG, WEBP.
-       Ejemplo: background-image: url('https://tu-url.com/foto.jpg');
-       O si usas GitHub Pages: background-image: url('assets/foto.jpg');
-    ▲▲▲ FIN DEL PLACEHOLDER ▲▲▲ */
     .photo-frame {
       width: 280px;
       height: 280px;
@@ -230,16 +223,15 @@
       z-index: -1;
     }
 
-    /* ===== CAMBIA LA FOTO AQUÍ ===== */
-   .photo-frame::after {
-    content: '';
-    position: absolute;
-    inset: 4px;
-    border-radius: 50%;
-    background-color: var(--card);
-    background-image: url('https://raw.githubusercontent.com/oinotna4761-beep/Mi-pagina-web/refs/heads/main/assets/foto.png');
-    background-size: cover;
-    background-position: center;
+    .photo-frame::after {
+      content: '';
+      position: absolute;
+      inset: 4px;
+      border-radius: 50%;
+      background-color: var(--card);
+      background-image: url('https://raw.githubusercontent.com/oinotna4761-beep/Mi-pagina-web/refs/heads/main/assets/foto.png');
+      background-size: cover;
+      background-position: center;
   }
 
     .photo-inner {
@@ -253,8 +245,7 @@
       justify-content: center;
       gap: 8px;
       position: relative;
-      z-index: 1;
-    }
+      }
 
     /* El icono y texto del placeholder desaparecen cuando hay foto */
     .photo-placeholder-icon { font-size: 4rem; line-height: 1; }
